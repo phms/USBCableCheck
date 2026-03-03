@@ -1,0 +1,26 @@
+Pinrow,Name,Description
+B1,GND,Ground
+B2,TX2+,SuperSpeed differential pair 3 TX
+B3,TX2-,SuperSpeed differential pair 3 TX
+B4,VBUS,Bus power
+B5,CC2,Configuration channel
+B6,D+,USB Data Positive
+B7,D-,USB Data Minus
+B8,SBU2,Side Band Use (SBU)
+B9,VBUS,Bus power
+B10,RX1-,"Super Speed differential pair 2, RX"
+B11,RX1+,"Super Speed differential pair 2, RX"
+B12,GND,Ground
+A12,GND,Ground
+A11,RX2+,"Super Speed differential pair 4, RX"
+A10,RX2-,"Super Speed differential pair 4, RX"
+A9,VBUS,Bus power
+A8,SBU1,Side Band Use (SBU)
+A7,D-,USB Data Minus
+A6,D+,USB Data Positive
+A5,CC1,Configuration channel
+A4,VBUS,Bus power
+A3,TX1-,SuperSpeed differential pair 1 TX
+A2,TX1+,SuperSpeed differential pair 1 TX
+A1,GND,Ground
+,Shield,Shield

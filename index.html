@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Simulador de placa de teste de cabos USB Type-C. Identifique o tipo e qualidade do seu cabo USB.">
+  <title>USB Cable Checker — Simulador de Teste</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1>USB Cable Checker</h1>
+    <p>Simulador de Placa de Teste de Cabos USB</p>
+  </header>
+
+  <div class="board-container">
+
+    <!-- Left: Board + Controls -->
+    <div class="board-left">
+      <!-- Board -->
+      <div class="board">
+        <div class="board-title">PINROW</div>
+
+        <div class="column-headers">
+          <span class="column-header">B</span>
+          <span></span>
+          <span class="column-header">A</span>
+        </div>
+
+        <!-- Pin grid — gerado dinamicamente pelo app.js -->
+        <div class="pin-grid" id="pin-grid"></div>
+
+        <!-- Shortcuts: GND, Shield, VBUS -->
+        <div class="shield-row">
+          <button class="shortcut-toggle" id="shortcut-gnd" data-shortcut="GND"
+            title="Atalho: liga/desliga todos os pinos GND">
+            <span class="shortcut-led" data-group="GND"></span>
+            <span class="shortcut-label">GND</span>
+          </button>
+          <span class="shield-label">Shield</span>
+          <button class="led-toggle" id="led-Shield" data-pin="Shield" data-group="SHIELD"
+            title="Shield — Cable shielding (blindagem)"></button>
+          <button class="shortcut-toggle" id="shortcut-vbus" data-shortcut="VBUS"
+            title="Atalho: liga/desliga todos os pinos VBUS">
+            <span class="shortcut-label">VBUS</span>
+            <span class="shortcut-led" data-group="VBUS"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button class="btn btn-danger" id="btn-reset">
+          <span>↺</span> Reset All
+        </button>
+        <select class="preset-select" id="preset-select">
+          <option value="">⚡ Presets...</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Right: Results + Legend -->
+    <div class="board-right">
+      <!-- Results -->
+      <div class="results-panel">
+        <div class="results-header">
+          <h2>Resultado</h2>
+          <span class="pin-count" id="pin-count">0 / 25 pinos ativos</span>
+        </div>
+        <div class="results-body" id="results-body">
+          <div class="result-empty">
+            <span class="empty-icon">🔌</span>
+            Ligue os pinos acima para testar um cabo
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="legend" id="legend"></div>
+    </div>
+
+  </div>
+
+  <!-- Scripts (sem modules para funcionar direto via file://) -->
+  <script src="pins.js"></script>
+  <script src="patterns.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
